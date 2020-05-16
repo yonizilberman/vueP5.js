@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <title>P5.js</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/style.css">
+  </head>
+  <body>
+    <div id="app">
+      
+      <h3>P5.js</h3>
+      <label for="inRow">Number of box in row (between 1 and 250):</label>
+      <input type="number" id="inRow" name="inRow" min="1" max="250" maxlength="3" v-model="inRow" v-on:keyup="onKey" v-mask="'###'" />
+  <br />
+      <label for="boxSize">Size of box (between 1 and 50):</label>
+      <input type="number" id="boxSize" name="boxSize" min="1" max="250" v-model="boxSize" v-on:keyup="onKey" />
+  <br />
+      <label for="padding">Padding between box (between 0 and 10):</label>
+      <input type="number" id="padding" name="padding" min="1" max="250" v-model="padding" v-on:keyup="onKey" />
+  <br />
+      <label for="frameRate">Frame rate (between 0 and 60):</label>
+      <input type="number" id="frameRate" name="frameRate" min="1" max="60" v-model="frameRate" v-on:keyup="onKey" v-mask="'###'" />
+
+      <h3>R,G,B colors change:</h3>
+      <label for="r">Red color (between 0 and 255):</label>
+      <input type="number" id="r" name="r" min="1" max="250" v-model="r" v-on:keyup="onKey" />
+  <br />
+      <label for="g">Green color (between 0 and 255):</label>
+      <input type="number" id="g" name="g" min="1" max="250" v-model="g" v-on:keyup="onKey" />
+  <br />
+      <label for="b">Blue color (between 0 and 255):</label>
+      <input type="number" id="b" name="b" min="1" max="250" v-model="b" v-on:keyup="onKey" />
+
+      <div id='myContainer'></div>
+    </div>
+  
+
+    <script src="js/lib/p5.min.js"></script>
+    <script src="js/lib/vue.min.js"></script>
+    <script src="js/sketch.js"></script>
+  </body>
+</html>
